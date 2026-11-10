@@ -1,0 +1,18 @@
+BLACK SAMP — ПОЛУЧЕНИЕ APK ЧЕРЕЗ GITHUB ACTIONS
+
+1. Создай отдельный пустой GitHub-репозиторий BLACK-SAMP-Android.
+2. Загрузи В САМЫЙ КОРЕНЬ репозитория содержимое папки BLACK_SAMP_Mobile_Launcher
+   (app, .github, build.gradle.kts, settings.gradle.kts и другие файлы).
+   ВАЖНО: скрытая папка .github обязательна.
+3. Открой GitHub -> Actions -> Build BLACK SAMP Android APK -> Run workflow.
+4. Дождись зелёной галочки. Открой запуск -> Artifacts -> BLACK-SAMP-Mobile-debug-APK.
+5. Скачай artifact ZIP, распакуй app-debug.apk и установи на Android.
+
+ЧТО РАБОТАЕТ: интерфейс Android-лаунчера, запуск приложения, проверка
+манифеста (после настройки HTTPS URL).
+ЧЕГО ПОКА НЕТ: Android SA-MP игрового движка, установки самой GTA,
+подключения к игровому серверу. Кнопки игры специально заблокированы.
+Это сборка для тестирования лаунчера, НЕ полноценный игровой клиент.
+
+Если Actions не видит workflow: убедись, что файл лежит в
+.github/workflows/android-apk.yml именно в корне репозитория.
